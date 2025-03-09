@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Clicker Game</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+        }
+        h1 {
+            color: red;
+        }
+        .heart {
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+        #message {
+            font-size: 20px;
+            color: darkred;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the Heart!</h1>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Red_heart.svg/1024px-Red_heart.svg.png" 
+         class="heart" onclick="increaseScore()">
+    <p>Love Score: <span id="score">0</span></p>
+    <p id="message"></p>
+
+    <script>
+        let score = 0;
+        function increaseScore() {
+            score++;
+            document.getElementById("score").innerText = score;
+            
+            if (score === 10) {
+                document.getElementById("message").innerText = "You’re Amazing!";
+            }
+            if (score === 20) {
+                document.getElementById("message").innerText = "I Love You!";
+            }
+            if (score === 30) {
+                document.getElementById("message").innerText = "You're My Everything!";
+            }
+        }
+    </script>
+</body>
+</html>
